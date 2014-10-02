@@ -1,0 +1,26 @@
+body {
+	font-family: "Roboto", sans-serif;
+	background: #fafafa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
+}
+
+a {
+	color: #f50007;
+}
+
+.card {
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 25px;
+  color: #000000;
+  background: #eeeeee;
+  box-shadow: 5px 5px 10px #666666;
+}
+
+.bottom {
+	margin-top: 60px;
+}
+
+

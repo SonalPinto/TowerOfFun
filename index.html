@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tower of Fun Index</title>
 	<link href="favicon.ico" rel="icon" >
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:700' rel='stylesheet' type='text/css'>
-    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script src="lib/jquery-2.1.1.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-	<ul>
-		<li><a href="games/dungeon/index.html">Dungeon Generator</li>	
-		<li><a href="games/ToF_v1/index.html">ToF v1.0</li>	
-		<li><a href="games/ToF_v2/index.html">ToF v2.0</li>	
-	</ul>
+
+<!-- The head -->
+	<div class = "container">    
+        <div class = "jumbotron">
+                <center>
+	                <h1>Tower of Fun</h1>
+	                <p>An rpg-shump-roguelike</p>
+	                <p>Here lies them Tower of Fun versions for your merriment</p>
+	                <a class = "btn btn-default" href="http://robotcantalk.blogspot.in/p/blog-page.html"><i class="fa fa-home fa-lg"></i> Project Page</a>
+	                <a class = "btn btn-default" href="https://github.com/SonalPinto/TowerOfFun"><i class="fa fa-github fa-lg"></i> GitHub</a>
+                </center>
+        </div>
+    </div>
+
+<!-- The body -->
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-12 card">
+	        	<h3>Dungeon Generator</h3>
+	        	<p>A roguelike begins and ends with procedurally generated content, and this case, a dungeon. This is where I picked <a href="http://phaser.io/">Phaser</a> as the game engine.</p>
+	        	<div class="btn-group">
+		        	<a class="btn btn-default" href="http://robotcantalk.blogspot.in/2014/09/dungeon-generator.html"><i class="fa fa-file-code-o fa-lg"></i> Docs I</a>
+		        	<a class="btn btn-default" href="http://robotcantalk.blogspot.in/2014/10/dungeon-drawing-in-phaser-using-tilemap.html"><i class="fa fa-file-code-o fa-lg"></i> Docs II</a>
+		        	<a class="btn btn-default" href="https://github.com/SonalPinto/TowerOfFun/tree/master/games/dungeon"><i class="fa fa-code fa-lg"></i> Source</a>
+		        	<a class="btn btn-primary" href="games/dungeon/index.html"><i class="fa fa-gamepad fa-lg"></i> Play</a>
+		        </div>
+	        </div>
+	        <div class="col-md-12 card">
+	        	<h3>Tower of Fun v1</h3>
+	        	<p>Harness the power of <a href="http://docs.phaser.io/Phaser.Tilemap.html">Phaser.tilemap</a> to fill up the dungeon. Also added the Player.</p>
+	        	<img src="assets/player_soloBig.png" class="img-responsive" alt="Player 1" height="64" width="64">
+	        	<br/>
+	        	<div class="btn-group">
+	        		<a class="btn btn-default" href="https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v1"><i class="fa fa-code fa-lg"></i> Source</a>
+	        		<a class="btn btn-primary" href="games/ToF_v1/index.html"><i class="fa fa-gamepad fa-lg"></i> Play</a>
+	        	</div>
+	        </div>
+	        <div class="col-md-12 card">
+	        	<h3>Tower of Fun v2</h3>
+	        	<p>You won't believe how a simple change in sprites can change the whole game. Player is now animated.</p>
+	        	<div class="btn-group">
+	        		<a class="btn btn-default" href="https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v2"><i class="fa fa-code fa-lg"></i> Source</a>
+	        		<a class="btn btn-primary" href="games/ToF_v2/index.html"><i class="fa fa-gamepad fa-lg"></i> Play</a>
+	        	</div>	
+	        </div>
+	    </div>
+	</div>
+
+<!-- The Foot -->
+	<div class="bottom ">
+        <div class="container">
+        	<div class="row">
+	        	<div class="col-md-12 push-right">
+		                <img src="assets/html5_logo.png" height="64">
+		                <img src="assets/phaser_logo.png" height="64">
+	            </div>
+	        </div>
+        </div>
+    </div>
+
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </body>
 </html>
 
