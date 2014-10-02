@@ -1,9 +1,10 @@
 
 var MAP_SIZE = 32;
 Dungeon.generate(MAP_SIZE);
-// Dungeon.print();
+Dungeon.print();
 var map = Dungeon.getMap();
 var rooms = Dungeon.getRooms();
+var tree = Dungeon.getTree();
 var stats;
 var gmap;
 var layer0;
@@ -17,21 +18,14 @@ var game = new Phaser.Game(640, 384, Phaser.AUTO, 'phaserCanvas', {
     render: render
 });
 
-var tileLibrary=[];
 function preload() {
 	game.load.image('wall', '../../assets/wall.png');
 	game.load.image('floor', '../../assets/floor.png');
     game.load.image('corridor', '../../assets/corridor.png');
     game.load.spritesheet('button', '../../assets/flixel-button.png', 80, 20);
-    tileLibrary[0]='wall';
-    tileLibrary[1]='floor';
 }
  
-
 function create() {
-	var startX = 200;
-	var startY = 32;
-
     //  Creates a blank tilemap
     gmap = game.add.tilemap();
 
@@ -54,6 +48,7 @@ function create() {
 	game.add.button( 400, 256, 'button', genMap,this, 0, 1, 2);
 	game.add.button( 400, 300, 'button', toggleBox,this, 0, 1, 2);
 	marker = game.add.graphics();
+	drawBox();
 }
 
 function update() {
@@ -99,7 +94,7 @@ function toggleBox() {
 }
 
 
-//~~~
+// Draws the Boxes
 function drawBox() {
 	if(state_toggleBox){
 		marker.clear();
