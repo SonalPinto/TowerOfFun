@@ -1,9 +1,11 @@
-
-// Main Game Object
-// it holds all the Phaser Game states
-
+// The main Game Object
+// The Game!
+// It shall hold all the Phaser game states
 var Game = {};
 
+// Preloader state. This where the loading screen and stuff would go... if I had one.
+// Load all the assets into the cache, and onLoadComplete, run this.loadComplete
+// and head to the next state.
 Game.Preloader = function (){};
 Game.Preloader.prototype = {
 	preload: function () {
@@ -22,7 +24,8 @@ Game.Preloader.prototype = {
 	}
 };
 
-
+// The state that states itself after the Preloader. The formidable MainMenu.
+// There is nothing here now. Just click to Play, rendered via text
 Game.MainMenu = function(){};
 Game.MainMenu.prototype = {
 	preload: function() {
@@ -30,6 +33,7 @@ Game.MainMenu.prototype = {
 	create: function() {
 		var style = { font: "24px Arial", fill: "white", align: "center" };
 		this.add.text(game.world.centerX, game.world.centerY, "MainMenu\nPlay", style);
+		// Click to go to the next state (Play)
 		this.game.input.onDown.add(this.startGame, this);
 	},
 	update: function() {
@@ -39,10 +43,11 @@ Game.MainMenu.prototype = {
 	}
 };
 
-
+// The Main Game state
 Game.Play = function() {};
 Game.Play.prototype = {
 
+	// Set some defaults and vars when this state starts
 	preload: function() {
 		// Game engine objects
 		this.tileMap = null;
@@ -92,7 +97,6 @@ Game.Play.prototype = {
 		this.map = this.dungeon.getMap();
 		this.rooms = this.dungeon.getRooms();
 	    this.stats = this.dungeon.getStats();
-	    // this.dungeon.print();
 
 	    // Translate the map into a spriteMap (check tiler.js)
 	    this.tileSpriteMap = tileMapTranslate(this.map);
@@ -104,7 +108,8 @@ Game.Play.prototype = {
 			}
 		}
 
-		// Create Player Sprite and enable Physics on it
+		// Create Player Sprite and enable Physics on Player
+		// Add the Player sprite at the center of the first room in the room list (it could be anywhere)
 		this.player = this.add.sprite(this.rooms[0].center.x*32, this.rooms[0].center.y*32, 'player');
 		this.physics.enable(this.player,Phaser.Physics.ARCADE);
 
@@ -124,7 +129,7 @@ Game.Play.prototype = {
 		// A four-directional cursor object that polls the keyboard
 		this.cursors = this.input.keyboard.createCursorKeys();
 
-		// Write the room dimensions for debug
+		// Print out room dimensions at their centers for debug or something
 		for(var i in this.rooms){
 			var r = this.rooms[i];
 			this.rooms[i].text1 = this.add.text(
@@ -134,11 +139,12 @@ Game.Play.prototype = {
 	    	{ font: "12px Arial", fill: "white", align: "center" });
 		}
 
-
+		// CLick to re-gen the dungeon (basically restart this state)
 		this.game.input.onDown.add(this.restartGame, this);
 	},
 
 	render: function() {
+		// Print some debug info in the corner
 		var ttile = {};
 		this.layer0.getTileXY(this.player.x,this.player.y,ttile);
 		var ttext = ttile.x+", "+ttile.y+" :: "+this.tileSpriteMap[ttile.x][ttile.y];
@@ -176,7 +182,7 @@ Game.Play.prototype = {
 	        moving++;
 	    }
 
-	    // diagonal movement should be slower
+	    // Diagonal movement should be slower. Like... duh.
 	    if(moving>1){
 	    	this.player.body.velocity.x *= 0.7;
 	    	this.player.body.velocity.y *= 0.7;
@@ -188,12 +194,14 @@ Game.Play.prototype = {
     	}
 	},
 
+	// Restart this state. Phaser handles everything!
 	restartGame: function() {
 		this.game.state.start('Play');
 	}
 };
 
-
+// Finally, instantiate Phaser with canvas dimensions of 800x480
+// Assing the states to Phaser and start on the Preloader
 var game = new Phaser.Game(800, 480, Phaser.AUTO, 'phaserCanvas');
 game.state.add('Preloader' , Game.Preloader);
 game.state.add('MainMenu' , Game.MainMenu);
