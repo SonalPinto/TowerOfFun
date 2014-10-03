@@ -20,6 +20,7 @@ All assets and common JS are stored in ./assets/ and ./libs/
 [Docs](http://robotcantalk.blogspot.in/2014/10/dungeon-drawing-in-phaser-using-tilemap.html)
 3. Tower of Fun v1 :
 [Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v1)
+[Docs](http://robotcantalk.blogspot.in/2014/10/tower-of-fun-part-1.html)
 4. Tower of Fun v2 :
 [Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v2)
 
