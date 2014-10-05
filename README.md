@@ -24,5 +24,7 @@ All assets and common JS are stored in ./assets/ and ./libs/
 4. Tower of Fun v2 :
 [Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v2)
 [Docs](http://robotcantalk.blogspot.in/2014/10/tower-of-fun-part-2.html)
-
+5. Tower of Fun v3 :
+[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v3)
+[Docs](#)
 
