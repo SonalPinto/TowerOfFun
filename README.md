@@ -19,12 +19,12 @@ All assets and common JS are stored in ./assets/ and ./libs/
 [Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/dungeon) || 
 [Docs](http://robotcantalk.blogspot.in/2014/10/dungeon-drawing-in-phaser-using-tilemap.html)
 3. Tower of Fun v1 :
-[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v1)
+[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v1) ||
 [Docs](http://robotcantalk.blogspot.in/2014/10/tower-of-fun-part-1.html)
 4. Tower of Fun v2 :
-[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v2)
+[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v2) ||
 [Docs](http://robotcantalk.blogspot.in/2014/10/tower-of-fun-part-2.html)
 5. Tower of Fun v3 :
-[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v3)
+[Source](https://github.com/SonalPinto/TowerOfFun/tree/master/games/ToF_v3) ||
 [Docs](#)
 
