@@ -3,7 +3,7 @@
 Hosts the Tower of Fun project!
 Much fun abound...
 
-I have hosted it on bitballoon : [toweroffun.bitballoon.com/](http://toweroffun.bitballoon.com/)
+I have hosted it on bitballoon : [https://toweroffun.netlify.app/](https://toweroffun.netlify.app/)
 
 I mostly document this on my blog - [Tower of Fun](http://robotcantalk.blogspot.in/p/blog-page.html)
 
